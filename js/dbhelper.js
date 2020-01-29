@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL () {
     const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`
+    return `http://127.0.0.1:${port}/data/restaurants.json`
   }
 
   /**
@@ -40,7 +40,7 @@ class DBHelper {
       if (error) {
         callback(error, null)
       } else {
-        const restaurant = restaurants.find(r => r.id === id)
+        const restaurant = restaurants.find(r => r.id === parseInt(id))
         if (restaurant) { // Got the restaurant
           callback(null, restaurant)
         } else { // Restaurant does not exist in the database
