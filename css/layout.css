@@ -7,7 +7,18 @@
   display: grid;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 320px) {
+  h2,
+  nav h1 a {
+    font-size: 1.5rem;
+  }
+
+  #filters-container select {
+    font-size: 4rem;
+    height: 40px;
+    width: 400px;
+  }
+
   #restaurants-list {
     padding: 30px 15px 30px;
   }
@@ -28,6 +39,17 @@
 }
 
 @media (min-width: 768px) {
+  h2,
+  nav h1 a {
+    font-size: 2rem;
+  }
+
+  #filters-container select {
+    font-size: 1.5rem;
+    height: 40px;
+    width: 400px;
+  }
+
   .inside #map-container {
     grid-area: map-container;
   }
