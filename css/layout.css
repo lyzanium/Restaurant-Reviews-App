@@ -1,69 +1,69 @@
 #restaurants-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
 .inside main {
-  display: grid;
+	display: grid;
 }
 
 @media (min-width: 320px) {
-  h2,
-  nav h1 a {
-    font-size: 1.5rem;
-  }
+	h2,
+	nav h1 a {
+		font-size: 1.5rem;
+	}
 
-  #filters-container select {
-    font-size: 4rem;
-    height: 40px;
-    width: 400px;
-  }
+	#filters-container select {
+		font-size: 1rem;
+		height: 40px;
+		width: 100%;
+	}
 
-  #restaurants-list {
-    padding: 30px 15px 30px;
-  }
+	#restaurants-list {
+		padding: 30px 15px 30px;
+	}
 
-  #reviews-list li article .name-wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+	#reviews-list li article .name-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 
-  #reviews-list li article .name-wrapper p:last-of-type {
-    align-self: center;
-  }
+	#reviews-list li article .name-wrapper p:last-of-type {
+		align-self: center;
+	}
 
-  #restaurant-container,
-  #reviews-container {
-    padding: 20px 40px;
-  }
+	#restaurant-container,
+	#reviews-container {
+		padding: 20px 40px;
+	}
 }
 
 @media (min-width: 768px) {
-  h2,
-  nav h1 a {
-    font-size: 2rem;
-  }
+	h2,
+	nav h1 a {
+		font-size: 2rem;
+	}
 
-  #filters-container select {
-    font-size: 1.5rem;
-    height: 40px;
-    width: 400px;
-  }
+	#filters-container select {
+		font-size: 1.5rem;
+		height: 40px;
+		width: 400px;
+	}
 
-  .inside #map-container {
-    grid-area: map-container;
-  }
+	.inside #map-container {
+		grid-area: map-container;
+	}
 
-  #restaurant-container {
-    grid-area: restaurant-container;
-  }
+	#restaurant-container {
+		grid-area: restaurant-container;
+	}
 
-  #reviews-container {
-    grid-area: reviews-container;
-  }
+	#reviews-container {
+		grid-area: reviews-container;
+	}
 
-  .inside main {
-    grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "map-container map-container" "reviews-container restaurant-container";
-  }
+	.inside main {
+		grid-template-columns: repeat(2, 50%);
+		grid-template-areas: "map-container map-container" "reviews-container restaurant-container";
+	}
 }
