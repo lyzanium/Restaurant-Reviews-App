@@ -67,7 +67,19 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     select.append(option)
   })
 }
+var tilesDb = {
+  getItem: function (key) {
+    // return Promise that has the image Blob/File/Stream.
+  },
 
+  saveTiles: function (tileUrls) {
+    // return Promise.
+  },
+
+  clear: function () {
+    // return Promise.
+  }
+}
 /**
  * Initialize leaflet map, called from HTML.
  */
@@ -85,7 +97,6 @@ initMap = () => {
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap)
-
   updateRestaurants()
 }
 /* window.initMap = () => {
@@ -211,3 +222,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+/**
+ *  here check that if no service worker is running we will start a new one and load it
+ */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').then(function (registration) {
+    }, function (err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err)
+    })
+  })
+}
