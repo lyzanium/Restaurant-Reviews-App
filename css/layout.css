@@ -10,12 +10,12 @@
 @media (min-width: 320px) {
 	h2,
 	nav h1 a {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 
 	#filters-container select {
-		font-size: 1.5rem;
-		height: 40px;
+		font-size: 1.25rem;
+		height: 25px;
 		width: 100%;
 	}
 
@@ -41,7 +41,7 @@
 @media (min-width: 768px) {
 	h2,
 	nav h1 a {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	#filters-container select {
